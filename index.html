@@ -11,14 +11,33 @@
     <header class="bg-white shadow-md p-4">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-bold text-blue-600">Trending News</h1>
-            <nav>
-                <ul class="flex space-x-6 text-gray-700">
-                    <li><a href="#" class="hover:text-blue-600">Inicio</a></li>
-                    <li><a href="#recent" class="hover:text-blue-600">Noticias Recientes</a></li>
-                    <li><a href="#popular" class="hover:text-blue-600">Más Visitadas</a></li>
-                    <li><a href="#articles" class="hover:text-blue-600">Artículos Reflexivos</a></li>
-                </ul>
-            </nav>
+            
+            <!-- Menu de Navegación -->
+            <div class="hidden md:flex space-x-6 text-gray-700">
+                <a href="#" class="hover:text-blue-600">Inicio</a>
+                <a href="#recent" class="hover:text-blue-600">Noticias Recientes</a>
+                <a href="#popular" class="hover:text-blue-600">Más Visitadas</a>
+                <a href="#articles" class="hover:text-blue-600">Artículos Reflexivos</a>
+            </div>
+
+            <!-- Botón de Menú Móvil (Hamburger) -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menu Móvil -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-md p-4 hidden">
+            <ul class="space-y-4">
+                <li><a href="#" class="text-gray-700 hover:text-blue-600">Inicio</a></li>
+                <li><a href="#recent" class="text-gray-700 hover:text-blue-600">Noticias Recientes</a></li>
+                <li><a href="#popular" class="text-gray-700 hover:text-blue-600">Más Visitadas</a></li>
+                <li><a href="#articles" class="text-gray-700 hover:text-blue-600">Artículos Reflexivos</a></li>
+            </ul>
         </div>
     </header>
 
@@ -74,89 +93,33 @@
             </div>
         </section>
     </main>
- 
-<header>
-    <nav class="menu">
-        <ul>
-            <li><a href="#recientes">Noticias Recientes</a></li>
-            <li><a href="#mas-vistas">Más Vistas</a></li>
-            <li><a href="#articulos-reflexivos">Artículos Reflexivos</a></li>
-        </ul>
-    </nav>
-</header>
-
-/* Estilos para el menú de navegación */
-header {
-    position: relative;
-}
-
-.menu {
-    position: fixed;
-    top: 10px; /* Ajusta la distancia desde la parte superior */
-    right: 20px; /* Ajusta la distancia desde el borde derecho */
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con algo de transparencia */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 20px; /* Relleno interno */
-}
-
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.menu li {
-    margin-right: 20px; /* Espacio entre los elementos */
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.menu a:hover {
-    color: #f1c40f; /* Color dorado cuando se pasa el ratón */
-}
-
-<section id="recientes">
-    <!-- Contenido de Noticias Recientes -->
-</section>
-
-<section id="mas-vistas">
-    <!-- Contenido de Más Vistas -->
-</section>
-
-<section id="articulos-reflexivos">
-    <!-- Contenido de Artículos Reflexivos -->
-</section>
-
 
     <!-- Footer -->
     <footer class="bg-white shadow-md p-4 mt-8">
         <div class="container mx-auto text-center">
             <p class="text-gray-600">&copy; 2025 Trending News. Todos los derechos reservados.</p>
             <div class="mt-2">
-                <a href="#" class="text-blue-600 hover:underline">Contacto</a> |
-                <a href="#" class="text-blue-600 hover:underline">Política de Privacidad</a>
-   <footer>
-    <div class="contact-info">
-        <h3>Contacto</h3>
-        <p><strong>Email:</strong> <a href="mailto:trendingnews.130@gmail.com">trendingnews.130@gmail.com</a></p>
-        <p><strong>Teléfono:</strong> <a href="tel:+1809-209-9497">+1809-209-9497</a></p>
-    </div>
-</footer>
-
-    </a>
-  </div>
-</footer>
-
+                <a href="#" class="text-blue-600 hover:underline">Política de Privacidad</a> |
+                <a href="#" class="text-blue-600 hover:underline">Términos y Condiciones</a>
             </div>
         </div>
+
+        <!-- Contacto -->
+        <div class="container mx-auto text-center mt-6">
+            <h3 class="font-semibold text-xl text-gray-800">Contacto</h3>
+            <p class="text-gray-600"><strong>Email:</strong> <a href="mailto:trendingnews.130@gmail.com" class="text-blue-600">trendingnews.130@gmail.com</a></p>
+            <p class="text-gray-600"><strong>Teléfono:</strong> <a href="tel:+1809-209-9497" class="text-blue-600">+1809-209-9497</a></p>
+        </div>
     </footer>
+
+    <!-- Script para Toggle del Menú Móvil -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
 </body>
 </html>
-
